@@ -42,7 +42,9 @@ namespace WingtipToys.Account
                         String cartId = usersShoppingCart.GetCartId();
                         usersShoppingCart.MigrateCart(cartId, Email.Text);
 
-                        IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                        Response.Redirect("/StandardUser/StandardUserPanel.aspx");
+                        //IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                        //IdentityHelper.RedirectToReturnUrl("/StandardUser/StandardUserPanel.aspx", Response);
                         break;
                     case SignInStatus.LockedOut:
                         Response.Redirect("/Account/Lockout");
