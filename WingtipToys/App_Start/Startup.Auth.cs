@@ -51,19 +51,21 @@ namespace WingtipToys
             //    clientId: "",
             //    clientSecret: "");
 
-            //app.UseTwitterAuthentication(
-            //   consumerKey: "",
-            //   consumerSecret: "");
+            app.UseTwitterAuthentication(
+               consumerKey: "C6VvExtnZNgRcJLF4Qt2crsz3",
+               consumerSecret: "QLnr9Xon8pX0lO8NOzb7oxWxMYEevkEuQKnJ1VKxmSMQbyM4nb");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
-
+            
+            app.UseFacebookAuthentication(
+              appId: "1829092933982053",
+              appSecret: "3b42ec82f5b84d25a3fc6e0c5f6c185c");
+            
+            /*
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
-              ClientId = "000000000000.apps.googleusercontent.com",
+              ClientId = "000-000.apps.googleusercontent.com",
               ClientSecret = "00000000000"
-            });
+            });*/
         }
     }
 }
