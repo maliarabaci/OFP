@@ -5,7 +5,7 @@ using System.Web;
 
 namespace WingtipToys.Logic
 {
-    public class AddCrowdfundingProject
+    public class CrowdfundingProject
     {
         public bool AddCrowdfundingProject(string ProjectName, string ProjectDesc, string DonationAmount, string Deadline)
         {
@@ -17,7 +17,7 @@ namespace WingtipToys.Logic
 
             using (CrowdfundingProjectContext _db = new CrowdfundingProjectContext())
             {
-                // Add product to DB.
+                // Add product to Database
                 _db.Products.Add(myProject);
                 _db.SaveChanges();
             }
