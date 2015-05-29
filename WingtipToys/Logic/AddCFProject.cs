@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using WingtipToys.Models;
 
 namespace WingtipToys.Logic
 {
-    public class CrowdfundingProject
+    public class AddCrowdfundingProject
     {
-        public bool AddCrowdfundingProject(string ProjectName, string ProjectDesc, string DonationAmount, string Deadline)
+        public bool AddCrowdfundingProjects(string ProjectName, string ProjectDesc, string DonationAmount, string Deadline)
         {
             var myProject = new CrowdfundingProject();
             myProject.ProjectName = ProjectName;
@@ -18,9 +19,10 @@ namespace WingtipToys.Logic
             using (CrowdfundingProjectContext _db = new CrowdfundingProjectContext())
             {
                 // Add product to Database
-                _db.Products.Add(myProject);
+                _db.CrowdfundingProjects.Add(myProject);
                 _db.SaveChanges();
             }
+
             // Success.
             return true;
         }
