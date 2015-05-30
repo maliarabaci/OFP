@@ -19,7 +19,7 @@ namespace WingtipToys.Logic
             using (CrowdfundingProjectContext _db = new CrowdfundingProjectContext())
             {
                 // Add product to Database
-                _db.CrowdfundingProjects.Add(myProject);
+                _db.CrowdfundingProject.Add(myProject);
                 _db.SaveChanges();
             }
 

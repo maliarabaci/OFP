@@ -73,17 +73,17 @@ public class NVPAPICaller
     encoder["PAYMENTREQUEST_0_CURRENCYCODE"] = "USD";
 
     // Get the Shopping Cart Products
-    using (WingtipToys.Logic.ShoppingCartActions myCartOrders = new WingtipToys.Logic.ShoppingCartActions())
-    {
-      List<CartItem> myOrderList = myCartOrders.GetCartItems();
+    //using (WingtipToys.Logic.ShoppingCartActions myCartOrders = new WingtipToys.Logic.ShoppingCartActions())
+    //{
+    //  List<Donation> myOrderList = myCartOrders.GetCartItems();
 
-      for (int i = 0; i < myOrderList.Count; i++)
-      {
-        encoder["L_PAYMENTREQUEST_0_NAME" + i] = myOrderList[i].Product.ProductName.ToString();
-        encoder["L_PAYMENTREQUEST_0_AMT" + i] = myOrderList[i].Product.UnitPrice.ToString();
-        encoder["L_PAYMENTREQUEST_0_QTY" + i] = myOrderList[i].Quantity.ToString();
-      }
-    }
+    //  for (int i = 0; i < myOrderList.Count; i++)
+    //  {
+    //    encoder["L_PAYMENTREQUEST_0_NAME" + i] = myOrderList[i].Product.ProductName.ToString();
+    //    encoder["L_PAYMENTREQUEST_0_AMT" + i] = myOrderList[i].Product.UnitPrice.ToString();
+    //    encoder["L_PAYMENTREQUEST_0_QTY" + i] = myOrderList[i].Quantity.ToString();
+    //  }
+    //}
 
     string pStrrequestforNvp = encoder.Encode();
     string pStresponsenvp = HttpCall(pStrrequestforNvp);

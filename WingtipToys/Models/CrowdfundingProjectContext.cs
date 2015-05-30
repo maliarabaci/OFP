@@ -7,6 +7,6 @@ namespace WingtipToys.Models
       : base("WingtipToys")
     {
     }
-    public DbSet<CrowdfundingProject> CrowdfundingProjects { get; set; } 
+    public DbSet<CrowdfundingProject> CrowdfundingProject { get; set; } 
   }
 }

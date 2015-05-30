@@ -60,10 +60,10 @@ namespace WingtipToys.Checkout
           }
 
           // Clear shopping cart.
-          using (WingtipToys.Logic.ShoppingCartActions usersShoppingCart =
-              new WingtipToys.Logic.ShoppingCartActions())
+          //using (WingtipToys.Logic.ShoppingCartActions usersShoppingCart =
+          //    new WingtipToys.Logic.ShoppingCartActions())
           {
-            usersShoppingCart.EmptyCart();
+            //usersShoppingCart.EmptyCart();
           }
 
           // Clear order id.

@@ -63,39 +63,39 @@ namespace WingtipToys.Checkout
           _db.SaveChanges();
 
           // Get the shopping cart items and process them.
-          using (WingtipToys.Logic.ShoppingCartActions usersShoppingCart = new WingtipToys.Logic.ShoppingCartActions())
-          {
-            List<CartItem> myOrderList = usersShoppingCart.GetCartItems();
+          //using (WingtipToys.Logic.ShoppingCartActions usersShoppingCart = new WingtipToys.Logic.ShoppingCartActions())
+          //{
+          //  List<Donation> myOrderList = usersShoppingCart.GetCartItems();
 
-            // Add OrderDetail information to the DB for each product purchased.
-            for (int i = 0; i < myOrderList.Count; i++)
-            {
-              // Create a new OrderDetail object.
-              var myOrderDetail = new OrderDetail();
-              myOrderDetail.OrderId = myOrder.OrderId;
-              myOrderDetail.Username = User.Identity.Name;
-              myOrderDetail.ProductId = myOrderList[i].ProductId;
-              myOrderDetail.Quantity = myOrderList[i].Quantity;
-              myOrderDetail.UnitPrice = myOrderList[i].Product.UnitPrice;
+          //  // Add OrderDetail information to the DB for each product purchased.
+          //  for (int i = 0; i < myOrderList.Count; i++)
+          //  {
+          //    // Create a new OrderDetail object.
+          //    var myOrderDetail = new OrderDetail();
+          //    myOrderDetail.OrderId = myOrder.OrderId;
+          //    myOrderDetail.Username = User.Identity.Name;
+          //    myOrderDetail.ProductId = myOrderList[i].ProductId;
+          //    myOrderDetail.Quantity = myOrderList[i].Quantity;
+          //    myOrderDetail.UnitPrice = myOrderList[i].Product.UnitPrice;
 
-              // Add OrderDetail to DB.
-              _db.OrderDetails.Add(myOrderDetail);
-              _db.SaveChanges();
-            }
+          //    // Add OrderDetail to DB.
+          //    _db.OrderDetails.Add(myOrderDetail);
+          //    _db.SaveChanges();
+          //  }
 
-            // Set OrderId.
-            Session["currentOrderId"] = myOrder.OrderId;
+          //  // Set OrderId.
+          //  Session["currentOrderId"] = myOrder.OrderId;
 
-            // Display Order information.
-            List<Order> orderList = new List<Order>();
-            orderList.Add(myOrder);
-            ShipInfo.DataSource = orderList;
-            ShipInfo.DataBind();
+          //  // Display Order information.
+          //  List<Order> orderList = new List<Order>();
+          //  orderList.Add(myOrder);
+          //  ShipInfo.DataSource = orderList;
+          //  ShipInfo.DataBind();
 
-            // Display OrderDetails.
-            OrderItemList.DataSource = myOrderList;
-            OrderItemList.DataBind();
-          }
+          //  // Display OrderDetails.
+          //  OrderItemList.DataSource = myOrderList;
+          //  OrderItemList.DataBind();
+          //}
         }
         else
         {

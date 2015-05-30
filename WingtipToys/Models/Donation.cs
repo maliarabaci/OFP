@@ -2,14 +2,14 @@
 
 namespace WingtipToys.Models
 {
-  public class CartItem
+  public class Donation
   {
     [Key]
     public string ItemId { get; set; }
 
     public string CartId { get; set; }
 
-    public int Quantity { get; set; }
+    public int DonationAmount { get; set; }
 
     public System.DateTime DateCreated { get; set; }
 

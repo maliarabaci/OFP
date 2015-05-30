@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WingtipToys.Models;
 
 namespace WingtipToys
 {
@@ -26,6 +27,32 @@ namespace WingtipToys
         Server.Transfer("ErrorPage.aspx?handler=Page_Error%20-%20Default.aspx",
             true);
       }
+    }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            int? CFProjectID = 1;
+            string ProjectName = "qwerty";
+            var _db = new WingtipToys.Models.CrowdfundingProjectContext();
+            IQueryable<CrowdfundingProject> query = _db.CrowdfundingProject;
+
+            if (CFProjectID.HasValue && CFProjectID > 0)
+            {
+                query = query.Where(p => p.CFProjectID == CFProjectID);
+            }
+            else if (!String.IsNullOrEmpty(ProjectName))
+            {
+                query = query.Where(p =>
+                          String.Compare(p.ProjectName, ProjectName) == 0);
+            }
+            else
+            {
+                query = null;
+            }
+        }
+        catch (Exception ex) { }
     }
   }
 }

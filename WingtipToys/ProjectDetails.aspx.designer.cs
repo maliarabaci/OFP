@@ -10,24 +10,15 @@
 namespace WingtipToys {
     
     
-    public partial class ShoppingCart {
+    public partial class ProjectDetails {
         
         /// <summary>
-        /// ShoppingCartTitle control.
+        /// projectDetail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ShoppingCartTitle;
-        
-        /// <summary>
-        /// CartList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView CartList;
+        protected global::System.Web.UI.WebControls.FormView projectDetail;
     }
 }

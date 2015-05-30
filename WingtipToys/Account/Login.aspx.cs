@@ -38,9 +38,9 @@ namespace WingtipToys.Account
                 switch (result)
                 {
                     case SignInStatus.Success:
-                        WingtipToys.Logic.ShoppingCartActions usersShoppingCart = new WingtipToys.Logic.ShoppingCartActions();
-                        String cartId = usersShoppingCart.GetCartId();
-                        usersShoppingCart.MigrateCart(cartId, Email.Text);
+                        //WingtipToys.Logic.ShoppingCartActions usersShoppingCart = new WingtipToys.Logic.ShoppingCartActions();
+                        //String cartId = usersShoppingCart.GetCartId();
+                        //usersShoppingCart.MigrateCart(cartId, Email.Text);
 
                         Response.Redirect("/StandardUser/StandardUserPanel.aspx");
                         //IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);

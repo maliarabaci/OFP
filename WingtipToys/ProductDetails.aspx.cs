@@ -20,6 +20,8 @@ namespace WingtipToys
                         [QueryString("ProductID")] int? productId,
                         [RouteData] string productName)
     {
+        //productId = 1;
+        //productName= "Convertible Car";
       var _db = new WingtipToys.Models.ProductContext();
       IQueryable<Product> query = _db.Products;
       if (productId.HasValue && productId > 0)

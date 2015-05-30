@@ -1,5 +1,5 @@
 ﻿	<%@ Page Title="Products" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" 
-         CodeBehind="ProductList.aspx.cs" Inherits="WingtipToys.ProductList" %>
+         CodeBehind="ProjectList.aspx.cs" Inherits="WingtipToys.ProductList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <section>
         <div>
@@ -47,8 +47,8 @@
                                     </span>
                                     <br />
                                     <a href="/Donate.aspx?productID=<%#:Item.ProductID %>">               
-                                      <%--  <span class="ProductListItem">--%>
-                                            <b>Donate<b>
+                                        <span class="ProductListItem">
+                                            <b>Donate</b><b>
                                         </span>           
                                     </a>
                                 </td>

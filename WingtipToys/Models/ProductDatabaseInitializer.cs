@@ -17,27 +17,27 @@ namespace WingtipToys.Models
                 new Category
                 {
                     CategoryID = 1,
-                    CategoryName = "Cars"
+                    CategoryName = "CrowdfundingProjects"
                 },
                 new Category
                 {
                     CategoryID = 2,
-                    CategoryName = "Planes"
+                    CategoryName = "CharityPrograms"
                 },
                 new Category
                 {
                     CategoryID = 3,
-                    CategoryName = "Trucks"
+                    CategoryName = "RFPPrograms"
                 },
                 new Category
                 {
                     CategoryID = 4,
-                    CategoryName = "Boats"
+                    CategoryName = "GrantPrograms"
                 },
-                new Category
+                 new Category
                 {
                     CategoryID = 5,
-                    CategoryName = "Rockets"
+                    CategoryName = "FavouriteProjects"
                 },
             };
 
