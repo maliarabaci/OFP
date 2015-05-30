@@ -5,7 +5,8 @@
     <asp:Label ID="Label2" runat="server" Text="Description"></asp:Label>
     <asp:TextBox ID="TextBox2" runat="server" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
     <asp:Label ID="Label3" runat="server" Text="Donation"></asp:Label>
-    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+    <asp:TextBox ID="TextBox3" runat="server" Width="124px"></asp:TextBox>
     <asp:Label ID="Label4" runat="server" Text="Deadline"></asp:Label>
     <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+    <asp:Button ID="ButtonSubmit" runat="server" Height="34px" OnClick="ButtonSubmit_Click" Text="Submit" Width="81px" />
 </asp:Content>
