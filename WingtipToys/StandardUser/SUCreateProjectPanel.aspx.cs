@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WingtipToys.Logic;
 
 namespace WingtipToys.StandardUser
 {
@@ -16,6 +17,13 @@ namespace WingtipToys.StandardUser
 
         protected void TextBox2_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        protected void ButtonSubmit_Click(object sender, EventArgs e)
+        {
+            AddCrowdfundingProject addProject = new AddCrowdfundingProject();
+            addProject.AddCrowdfundingProjects(this.TextBox1.Text, this.TextBox2.Text, this.TextBox3.Text, this.TextBox4.Text);
 
         }
     }
