@@ -18,5 +18,12 @@ namespace WingtipToys.StandardUser
         {
 
         }
+
+        protected void ButtonSubmit_Click(object sender, EventArgs e)
+        {
+            AddCrowdfundingProject addProject = new AddCrowdfundingProject();
+            addProject.AddCrowdfundingProjects(this.TextBox1.Text, this.TextBox2.Text, this.TextBox3.Text, this.TextBox4.Text);
+
+        }
     }
 }
