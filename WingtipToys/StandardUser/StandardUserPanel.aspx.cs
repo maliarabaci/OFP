@@ -19,7 +19,7 @@ namespace WingtipToys.StandardUser
 
     protected void CreateProjectButton_Click(object sender, EventArgs e)
     {
-
+        Response.Redirect("/StandardUser/SUCreateProjectPanel.aspx");
 
     }
 
