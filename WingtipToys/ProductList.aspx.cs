@@ -37,5 +37,10 @@ namespace WingtipToys
       }
       return query;
     }
+
+    protected void productList_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
   }
 }
